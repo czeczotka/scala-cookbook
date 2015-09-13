@@ -7,6 +7,7 @@ object Strings extends App {
   testingStringEquality_1_1()
   processingAStringOneCharacterAtATime_1_5()
   findingPatternsInStrings_1_6()
+  replacingPatternsInStrings_1_7()
 
   def testingStringEquality_1_1() {
     def line(first: String, second: String) = {
@@ -56,5 +57,13 @@ object Strings extends App {
       case _ => println("Found " + matches.mkString("[", ",", "]"))
     }
     println()
+  }
+
+  def replacingPatternsInStrings_1_7() {
+    println("1.7 Replacing patterns in strings")
+
+    println("123 Main Street".replaceAll("[0-9]", "X"))
+    println("H".r.replaceFirstIn("Hello world!", "J"))
+    println("Hello world!".replaceFirst("H", "J"))
   }
 }
