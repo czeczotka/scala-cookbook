@@ -1,5 +1,3 @@
 package com.czeczotka.scala.cookbook.testing
 
-class Topping {
-
-}
+case class Topping(name: String)
