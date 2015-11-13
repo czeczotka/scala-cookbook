@@ -2,7 +2,7 @@ package com.czeczotka.scala.cookbook.testing
 
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
-class PizzaSpec extends FunSuite with BeforeAndAfter {
+class PizzaTddSpec extends FunSuite with BeforeAndAfter {
 
   var pizza: Pizza = _
 
