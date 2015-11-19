@@ -19,6 +19,23 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
     assert(pizza.getToppings.size == 1)
   }
 
+  test("catching an exception") {
+    val exception = intercept[Exception] {
+      pizza.boom
+    }
+    assert(exception.isInstanceOf[Exception])
+    assert(exception.getMessage == "Boom!")
+  }
+
+
+  test("catching another exception") {
+    intercept[Exception] {
+      pizza.boom
+    } match {
+      case ex: Exception => assert(ex.getMessage == "Boom!")
+    }
+  }
+
   test("test pizza pricing") (pending)
 
 }
