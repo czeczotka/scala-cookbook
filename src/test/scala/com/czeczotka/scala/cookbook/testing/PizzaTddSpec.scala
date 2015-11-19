@@ -27,12 +27,17 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
     assert(exception.getMessage == "Boom!")
   }
 
-
   test("catching another exception") {
     intercept[Exception] {
       pizza.boom
     } match {
       case ex: Exception => assert(ex.getMessage == "Boom!")
+    }
+  }
+
+  test("catching yet another exception") {
+    intercept[Exception] {
+      pizza.boom
     }
   }
 
