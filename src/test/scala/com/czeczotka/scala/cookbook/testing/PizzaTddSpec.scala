@@ -1,5 +1,6 @@
 package com.czeczotka.scala.cookbook.testing
 
+import com.czeczotka.scala.cookbook.Tdd
 import org.scalatest.{BeforeAndAfter, FunSuite}
 
 class PizzaTddSpec extends FunSuite with BeforeAndAfter {
@@ -10,16 +11,16 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
     pizza = new Pizza
   }
 
-  test("new pizza has no toppings") {
+  test("new pizza has no toppings", Tdd) {
     assert(pizza.getToppings.isEmpty)
   }
 
-  test("adding one topping") {
+  test("adding one topping", Tdd) {
     pizza.addTopping(Topping("green olives"))
     assert(pizza.getToppings.size == 1)
   }
 
-  test("catching an exception") {
+  test("catching an exception", Tdd) {
     val exception = intercept[Exception] {
       pizza.boom
     }
@@ -27,7 +28,7 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
     assert(exception.getMessage == "Boom!")
   }
 
-  test("catching another exception") {
+  test("catching another exception", Tdd) {
     intercept[Exception] {
       pizza.boom
     } match {
@@ -35,12 +36,12 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
     }
   }
 
-  test("catching yet another exception") {
+  test("catching yet another exception", Tdd) {
     intercept[Exception] {
       pizza.boom
     }
   }
 
-  test("test pizza pricing") (pending)
+  test("test pizza pricing", Tdd) (pending)
 
 }
