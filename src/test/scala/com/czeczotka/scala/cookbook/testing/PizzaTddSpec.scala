@@ -44,4 +44,6 @@ class PizzaTddSpec extends FunSuite with BeforeAndAfter {
 
   test("test pizza pricing", Tdd) (pending)
 
+  ignore("test ignore", Tdd) (pending)
+
 }

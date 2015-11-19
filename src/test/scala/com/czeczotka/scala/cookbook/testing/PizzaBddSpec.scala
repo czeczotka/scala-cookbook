@@ -20,6 +20,8 @@ class PizzaBddSpec extends FunSpec with BeforeAndAfter {
 
     it("should allow removal of toppings") (pending)
 
+    ignore("should be ignored") (pending)
+
   }
 
 }
