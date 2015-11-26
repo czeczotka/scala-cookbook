@@ -1,6 +1,7 @@
 package com.czeczotka.scala.cookbook.chapter01
 
 import scala.collection.immutable.Nil
+import com.czeczotka.scala.cookbook.chapter01.utils.StringImprovements
 
 object Strings extends App {
 
@@ -8,6 +9,7 @@ object Strings extends App {
   processingAStringOneCharacterAtATime_1_5()
   findingPatternsInStrings_1_6()
   replacingPatternsInStrings_1_7()
+  addOwnBehaviourToString_1_10()
 
   def testingStringEquality_1_1() {
     def line(first: String, second: String) = {
@@ -65,5 +67,15 @@ object Strings extends App {
     println("123 Main Street".replaceAll("[0-9]", "X"))
     println("H".r.replaceFirstIn("Hello world!", "J"))
     println("Hello world!".replaceFirst("H", "J"))
+    println()
+  }
+
+  def addOwnBehaviourToString_1_10() {
+    println("1.10 Add Your Own Methods to the String class")
+
+    val s = "HAL"
+    println(s"s =           $s")
+    println(s"s.increment = ${s.increment}")
+    println()
   }
 }
