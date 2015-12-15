@@ -6,6 +6,7 @@ object Numbers extends App {
 
   parsingANumberFromAString_2_1()
   convertingBetweenNumericTypes_2_2()
+  overrideTheDefaultNumericType_2_3()
 
   def parsingANumberFromAString_2_1() = {
     println("2.1 Parsing a Number from a String")
@@ -28,6 +29,19 @@ object Numbers extends App {
     println("Byte.MaxValue.toFloat = " + Byte.MaxValue.toFloat)
     println("(Byte.MaxValue + 1).toByte = " + (Byte.MaxValue + 1).toByte)
     println("(Byte.MaxValue + 1).isValidByte = " + (Byte.MaxValue + 1).isValidByte)
+    println()
+  }
+
+  def overrideTheDefaultNumericType_2_3() = {
+    val long1 = 1000: Long
+    val long2: Long = 2000
+    val hex1: Long = 0xFF
+    val hex2: Long = 0x100
+    println("2.3 Overriding the Default Numeric Type")
+    println("long1.getClass = " + long1.getClass)
+    println("long2.getClass = " + long2.getClass)
+    println("hex1 = " + hex1)
+    println("hex2 = " + hex2)
     println()
   }
 
