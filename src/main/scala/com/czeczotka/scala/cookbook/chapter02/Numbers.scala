@@ -54,9 +54,13 @@ object Numbers extends App {
     val a = 0.3
     val b = 0.1 + 0.2
 
+    val a_bd = BigDecimal(0.3)
+    val b_bd = BigDecimal(0.1) + BigDecimal(0.2)
+
     println("2.5 Comparing Floating-Point Numbers")
-    println("(a == b) = " + (a == b))
-    println("~=(a, b, 0.00000000001) = " + ~=(a, b, 0.00000001))
+    println(s"($a == $b) = " + (a == b))
+    println(s"~=($a, $b, 0.00000000000001) = " + ~=(a, b, 0.00000001))
+    println(s"BigDecimal: ($a_bd == $b_bd) = " + (a_bd == b_bd))
   }
 
   implicit class String2Int(s: String) {
