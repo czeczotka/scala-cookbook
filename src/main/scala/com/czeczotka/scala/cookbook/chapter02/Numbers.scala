@@ -8,6 +8,7 @@ object Numbers extends App {
   convertingBetweenNumericTypes_2_2()
   overrideTheDefaultNumericType_2_3()
   comparingFloatingPointNumbers_2_5()
+  creatingRangeListOrArrayOfNumbers_2_8()
 
   def parsingANumberFromAString_2_1() = {
     println("2.1 Parsing a Number from a String")
@@ -61,7 +62,17 @@ object Numbers extends App {
     println(s"($a == $b) = " + (a == b))
     println(s"~=($a, $b, 0.00000000000001) = " + ~=(a, b, 0.00000001))
     println(s"BigDecimal: ($a_bd == $b_bd) = " + (a_bd == b_bd))
+    println()
   }
+
+  def creatingRangeListOrArrayOfNumbers_2_8() = {
+    println("2.8 Creating a Range, List or Array of Numbers")
+    println("1 to 10 by 2 = " + (1 to 10 by 2))
+    println("(1 until 11).toArray = " + (1 until 11).toArray.mkString("[", ",", "]"))
+    println("(1 until 11).toList = " + (1 until 11).toList)
+    println()
+  }
+
 
   implicit class String2Int(s: String) {
     def toInt(radix: Int): Try[Int] = Try(Integer.parseInt(s, radix))
