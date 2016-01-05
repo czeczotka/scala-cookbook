@@ -7,6 +7,7 @@ object Numbers extends App {
   parsingANumberFromAString_2_1()
   convertingBetweenNumericTypes_2_2()
   overrideTheDefaultNumericType_2_3()
+  comparingFloatingPointNumbers_2_5()
 
   def parsingANumberFromAString_2_1() = {
     println("2.1 Parsing a Number from a String")
@@ -43,6 +44,19 @@ object Numbers extends App {
     println("hex1 = " + hex1)
     println("hex2 = " + hex2)
     println()
+  }
+
+  def comparingFloatingPointNumbers_2_5() = {
+    def ~=(x: Double, y: Double, precision: Double) = {
+      if ((x - y).abs < precision) true else false
+    }
+    
+    val a = 0.3
+    val b = 0.1 + 0.2
+
+    println("2.5 Comparing Floating-Point Numbers")
+    println("(a == b) = " + (a == b))
+    println("~=(a, b, 0.00000000001) = " + ~=(a, b, 0.00000001))
   }
 
   implicit class String2Int(s: String) {
