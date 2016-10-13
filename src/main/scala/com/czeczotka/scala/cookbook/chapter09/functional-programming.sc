@@ -19,3 +19,10 @@ myAdd(myTriple(-3), triple(-2))
 // return nothing
 def plusOne(i: Int): Unit = i + 1
 plusOne(2)
+
+def executeXTimes(callback: () => Unit, numTimes: Int): Unit = {
+  for (i <- 1 to numTimes) callback()
+}
+
+val sayHello = () => println("hello")
+executeXTimes(sayHello, 3)
